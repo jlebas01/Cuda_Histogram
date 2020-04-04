@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Histogram_project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="histogram">
+				<Option output="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/histogram" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include"/>
+					<Add directory="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 histogram"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="histogram/fast">
+				<Option output="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/histogram" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include"/>
+					<Add directory="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 histogram/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/chronoCPU.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/chronoGPU.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/common.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/conv_utils.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/device/device.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/student4.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/tools.hpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoCPU.cpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoGPU.cu">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/conv_utils.cpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/device/device.cu">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/student4.cu">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/tools.cpp">
+			<Option target="histogram"/>
+		</Unit>
+		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
