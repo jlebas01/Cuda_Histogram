@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 
-namespace IMAC
+namespace utils
 {
 	enum 
 	{

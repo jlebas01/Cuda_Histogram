@@ -1,21 +1,21 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b538b/fast && /usr/bin/make -f CMakeFiles/cmTC_b538b.dir/build.make CMakeFiles/cmTC_b538b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_08c7c/fast && /usr/bin/make -f CMakeFiles/cmTC_08c7c.dir/build.make CMakeFiles/cmTC_08c7c.dir/build
 make[1] : on entre dans le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_b538b.dir/src.cxx.o
-/usr/bin/g++-8    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b538b.dir/src.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b538b
-/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/201.6668.86/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b538b.dir/link.txt --verbose=1
-/usr/bin/g++-8   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b538b.dir/src.cxx.o  -o cmTC_b538b 
-/usr/bin/ld : CMakeFiles/cmTC_b538b.dir/src.cxx.o : dans la fonction « main » :
+Building CXX object CMakeFiles/cmTC_08c7c.dir/src.cxx.o
+/usr/bin/g++-8    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_08c7c.dir/src.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_08c7c
+/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/201.6668.86/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08c7c.dir/link.txt --verbose=1
+/usr/bin/g++-8   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_08c7c.dir/src.cxx.o  -o cmTC_08c7c 
+/usr/bin/ld : CMakeFiles/cmTC_08c7c.dir/src.cxx.o : dans la fonction « main » :
 src.cxx:(.text+0x46) : référence indéfinie vers « pthread_create »
 /usr/bin/ld : src.cxx:(.text+0x52) : référence indéfinie vers « pthread_detach »
 /usr/bin/ld : src.cxx:(.text+0x63) : référence indéfinie vers « pthread_join »
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_b538b.dir/build.make:87: cmTC_b538b] Error 1
+make[1]: *** [CMakeFiles/cmTC_08c7c.dir/build.make:87: cmTC_08c7c] Error 1
 make[1] : on quitte le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_b538b/fast] Error 2
+make: *** [Makefile:121: cmTC_08c7c/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cd712/fast && /usr/bin/make -f CMakeFiles/cmTC_cd712.dir/build.make CMakeFiles/cmTC_cd712.dir/build
+Run Build Command(s):/usr/bin/make cmTC_9ad58/fast && /usr/bin/make -f CMakeFiles/cmTC_9ad58.dir/build.make CMakeFiles/cmTC_9ad58.dir/build
 make[1] : on entre dans le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_cd712.dir/CheckFunctionExists.cxx.o
-/usr/bin/g++-8    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cd712.dir/CheckFunctionExists.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_cd712
-/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/201.6668.86/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd712.dir/link.txt --verbose=1
-/usr/bin/g++-8   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cd712.dir/CheckFunctionExists.cxx.o  -o cmTC_cd712  -lpthreads 
+Building CXX object CMakeFiles/cmTC_9ad58.dir/CheckFunctionExists.cxx.o
+/usr/bin/g++-8    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9ad58.dir/CheckFunctionExists.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_9ad58
+/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/201.6668.86/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ad58.dir/link.txt --verbose=1
+/usr/bin/g++-8   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9ad58.dir/CheckFunctionExists.cxx.o  -o cmTC_9ad58  -lpthreads 
 /usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_cd712.dir/build.make:87: cmTC_cd712] Error 1
+make[1]: *** [CMakeFiles/cmTC_9ad58.dir/build.make:87: cmTC_9ad58] Error 1
 make[1] : on quitte le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_cd712/fast] Error 2
+make: *** [Makefile:121: cmTC_9ad58/fast] Error 2
 
 
 

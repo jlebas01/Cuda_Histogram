@@ -57,35 +57,22 @@ include CMakeFiles/histogram.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/histogram.dir/flags.make
 
-CMakeFiles/histogram.dir/src/chronoCPU.cpp.o: CMakeFiles/histogram.dir/flags.make
-CMakeFiles/histogram.dir/src/chronoCPU.cpp.o: ../src/chronoCPU.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/histogram.dir/src/chronoCPU.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/chronoCPU.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoCPU.cpp
+CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o: ../src/chrono/chronoCPU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp
 
-CMakeFiles/histogram.dir/src/chronoCPU.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/chronoCPU.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoCPU.cpp > CMakeFiles/histogram.dir/src/chronoCPU.cpp.i
+CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.i"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp > CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.i
 
-CMakeFiles/histogram.dir/src/chronoCPU.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/chronoCPU.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoCPU.cpp -o CMakeFiles/histogram.dir/src/chronoCPU.cpp.s
-
-CMakeFiles/histogram.dir/src/conv_utils.cpp.o: CMakeFiles/histogram.dir/flags.make
-CMakeFiles/histogram.dir/src/conv_utils.cpp.o: ../src/conv_utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/histogram.dir/src/conv_utils.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/conv_utils.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/conv_utils.cpp
-
-CMakeFiles/histogram.dir/src/conv_utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/conv_utils.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/conv_utils.cpp > CMakeFiles/histogram.dir/src/conv_utils.cpp.i
-
-CMakeFiles/histogram.dir/src/conv_utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/conv_utils.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/conv_utils.cpp -o CMakeFiles/histogram.dir/src/conv_utils.cpp.s
+CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.s"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp -o CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.s
 
 CMakeFiles/histogram.dir/src/lodepng.cpp.o: CMakeFiles/histogram.dir/flags.make
 CMakeFiles/histogram.dir/src/lodepng.cpp.o: ../src/lodepng.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/histogram.dir/src/lodepng.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/histogram.dir/src/lodepng.cpp.o"
 	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/lodepng.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp
 
 CMakeFiles/histogram.dir/src/lodepng.cpp.i: cmake_force
@@ -96,30 +83,43 @@ CMakeFiles/histogram.dir/src/lodepng.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/lodepng.cpp.s"
 	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp -o CMakeFiles/histogram.dir/src/lodepng.cpp.s
 
-CMakeFiles/histogram.dir/src/tools.cpp.o: CMakeFiles/histogram.dir/flags.make
-CMakeFiles/histogram.dir/src/tools.cpp.o: ../src/tools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/histogram.dir/src/tools.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/tools.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/tools.cpp
+CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o: ../src/utils/conv_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp
 
-CMakeFiles/histogram.dir/src/tools.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/tools.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/tools.cpp > CMakeFiles/histogram.dir/src/tools.cpp.i
+CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.i"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp > CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.i
 
-CMakeFiles/histogram.dir/src/tools.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/tools.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/tools.cpp -o CMakeFiles/histogram.dir/src/tools.cpp.s
+CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.s"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp -o CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.s
 
-CMakeFiles/histogram.dir/src/chronoGPU.cu.o: CMakeFiles/histogram.dir/flags.make
-CMakeFiles/histogram.dir/src/chronoGPU.cu.o: ../src/chronoGPU.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object CMakeFiles/histogram.dir/src/chronoGPU.cu.o"
-	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoGPU.cu -o CMakeFiles/histogram.dir/src/chronoGPU.cu.o
+CMakeFiles/histogram.dir/src/utils/tools.cpp.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/utils/tools.cpp.o: ../src/utils/tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/histogram.dir/src/utils/tools.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/histogram.dir/src/utils/tools.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp
 
-CMakeFiles/histogram.dir/src/chronoGPU.cu.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/chronoGPU.cu.i"
+CMakeFiles/histogram.dir/src/utils/tools.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/histogram.dir/src/utils/tools.cpp.i"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp > CMakeFiles/histogram.dir/src/utils/tools.cpp.i
+
+CMakeFiles/histogram.dir/src/utils/tools.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/histogram.dir/src/utils/tools.cpp.s"
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp -o CMakeFiles/histogram.dir/src/utils/tools.cpp.s
+
+CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o: ../src/chrono/chronoGPU.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o"
+	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu -o CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o
+
+CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.i"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/histogram.dir/src/chronoGPU.cu.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/chronoGPU.cu.s"
+CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/histogram.dir/src/device/device.cu.o: CMakeFiles/histogram.dir/flags.make
@@ -135,9 +135,35 @@ CMakeFiles/histogram.dir/src/device/device.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/device/device.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
+CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o: ../src/histogram_normalizer.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o"
+	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/histogram_normalizer.cu -o CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o
+
+CMakeFiles/histogram.dir/src/histogram_normalizer.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/histogram_normalizer.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/histogram.dir/src/histogram_normalizer.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/histogram_normalizer.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: ../src/kernels/kernel.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CUDA object CMakeFiles/histogram.dir/src/kernels/kernel.cu.o"
+	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu -o CMakeFiles/histogram.dir/src/kernels/kernel.cu.o
+
+CMakeFiles/histogram.dir/src/kernels/kernel.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/kernels/kernel.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/histogram.dir/src/kernels/kernel.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/kernels/kernel.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 CMakeFiles/histogram.dir/src/main.cu.o: CMakeFiles/histogram.dir/flags.make
 CMakeFiles/histogram.dir/src/main.cu.o: ../src/main.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object CMakeFiles/histogram.dir/src/main.cu.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CUDA object CMakeFiles/histogram.dir/src/main.cu.o"
 	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu -o CMakeFiles/histogram.dir/src/main.cu.o
 
 CMakeFiles/histogram.dir/src/main.cu.i: cmake_force
@@ -148,44 +174,48 @@ CMakeFiles/histogram.dir/src/main.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/main.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
-CMakeFiles/histogram.dir/src/student4.cu.o: CMakeFiles/histogram.dir/flags.make
-CMakeFiles/histogram.dir/src/student4.cu.o: ../src/student4.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CUDA object CMakeFiles/histogram.dir/src/student4.cu.o"
-	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/student4.cu -o CMakeFiles/histogram.dir/src/student4.cu.o
+CMakeFiles/histogram.dir/src/processing/process.cu.o: CMakeFiles/histogram.dir/flags.make
+CMakeFiles/histogram.dir/src/processing/process.cu.o: ../src/processing/process.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CUDA object CMakeFiles/histogram.dir/src/processing/process.cu.o"
+	/usr/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu -o CMakeFiles/histogram.dir/src/processing/process.cu.o
 
-CMakeFiles/histogram.dir/src/student4.cu.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/student4.cu.i"
+CMakeFiles/histogram.dir/src/processing/process.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/histogram.dir/src/processing/process.cu.i"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/histogram.dir/src/student4.cu.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/student4.cu.s"
+CMakeFiles/histogram.dir/src/processing/process.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/histogram.dir/src/processing/process.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 # Object files for target histogram
 histogram_OBJECTS = \
-"CMakeFiles/histogram.dir/src/chronoCPU.cpp.o" \
-"CMakeFiles/histogram.dir/src/conv_utils.cpp.o" \
+"CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o" \
 "CMakeFiles/histogram.dir/src/lodepng.cpp.o" \
-"CMakeFiles/histogram.dir/src/tools.cpp.o" \
-"CMakeFiles/histogram.dir/src/chronoGPU.cu.o" \
+"CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o" \
+"CMakeFiles/histogram.dir/src/utils/tools.cpp.o" \
+"CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o" \
 "CMakeFiles/histogram.dir/src/device/device.cu.o" \
+"CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o" \
+"CMakeFiles/histogram.dir/src/kernels/kernel.cu.o" \
 "CMakeFiles/histogram.dir/src/main.cu.o" \
-"CMakeFiles/histogram.dir/src/student4.cu.o"
+"CMakeFiles/histogram.dir/src/processing/process.cu.o"
 
 # External object files for target histogram
 histogram_EXTERNAL_OBJECTS =
 
-histogram: CMakeFiles/histogram.dir/src/chronoCPU.cpp.o
-histogram: CMakeFiles/histogram.dir/src/conv_utils.cpp.o
+histogram: CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o
 histogram: CMakeFiles/histogram.dir/src/lodepng.cpp.o
-histogram: CMakeFiles/histogram.dir/src/tools.cpp.o
-histogram: CMakeFiles/histogram.dir/src/chronoGPU.cu.o
+histogram: CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o
+histogram: CMakeFiles/histogram.dir/src/utils/tools.cpp.o
+histogram: CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o
 histogram: CMakeFiles/histogram.dir/src/device/device.cu.o
+histogram: CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o
+histogram: CMakeFiles/histogram.dir/src/kernels/kernel.cu.o
 histogram: CMakeFiles/histogram.dir/src/main.cu.o
-histogram: CMakeFiles/histogram.dir/src/student4.cu.o
+histogram: CMakeFiles/histogram.dir/src/processing/process.cu.o
 histogram: CMakeFiles/histogram.dir/build.make
 histogram: CMakeFiles/histogram.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable histogram"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable histogram"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/histogram.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

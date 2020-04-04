@@ -13,12 +13,10 @@
 typedef unsigned char uchar;
 typedef unsigned int uint;
 
-static void HandleError(cudaError_t err, const char *file, const int line)
-{
-    if (err != cudaSuccess)
-    {
-    	std::stringstream ss;
-    	ss << line;
+static void HandleError(cudaError_t err, const char *file, const int line) {
+    if (err != cudaSuccess) {
+        std::stringstream ss;
+        ss << line;
         std::string errMsg(cudaGetErrorString(err));
         errMsg += " (file: " + std::string(file);
         errMsg += " at line: " + ss.str() + ")";
@@ -27,7 +25,9 @@ static void HandleError(cudaError_t err, const char *file, const int line)
     }
 }
 
-#define HANDLE_ERROR( err ) (HandleError( err, __FILE__, __LINE__ ))
+
+#define HANDLE_ERROR(err) (HandleError( err, __FILE__, __LINE__ ))
+
 #endif
 
 

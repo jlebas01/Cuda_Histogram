@@ -5,10 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoGPU.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chronoGPU.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/device/device.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/device/device.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/histogram_normalizer.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/kernels/kernel.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/main.cu.o"
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/student4.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/student4.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
@@ -17,10 +19,10 @@ set(CMAKE_CUDA_TARGET_INCLUDE_PATH
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chronoCPU.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chronoCPU.cpp.o"
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/conv_utils.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/conv_utils.cpp.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/lodepng.cpp.o"
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/tools.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/tools.cpp.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/utils/tools.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

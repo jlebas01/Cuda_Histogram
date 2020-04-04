@@ -11,10 +11,12 @@
 #include <vector_types.h>
 
 
-// ================================================== For image comparison
-std::ostream &operator<<(std::ostream &os, const uchar4 &c);
+namespace utils {
 
-void compareImages(const std::vector<uchar4> &a, const std::vector<uchar4> &b);
+    std::ostream &operator<<(std::ostream &os, const uchar4 &c);
 
+    void compareImages(const std::vector<uchar4> &a, const std::vector<uchar4> &b);
+
+}
 
 #endif //HISTOGRAM_PROJECT_TOOLS_HPP

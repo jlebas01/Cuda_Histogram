@@ -8,8 +8,9 @@
 */
 
 #include <histogram_normalizer.hpp>
-#include <chronoGPU.hpp>
-#include <device/device.hpp>
+#include <chrono/chronoGPU.hpp>
+#include <devices/device.hpp>
+#include <utils/tools.hpp>
 #include <vector>
 
 namespace IMAC {
@@ -39,19 +40,19 @@ namespace IMAC {
                     if (dY >= imgHeight)
                         dY = imgHeight - 1;
 
-                    const int idMat = j * matSize + i;
+                    //const int idMat = j * matSize + i;
 
                     uchar4 input = tex2D(texInput, dX, dY);
 
-                    sum.x += (float) input.x * mat[idMat];
-                    sum.y += (float) input.y * mat[idMat];
-                    sum.z += (float) input.z * mat[idMat];
+                    sum.x += (float) input.x;
+                    sum.y += (float) input.y;
+                    sum.z += (float) input.z;
                 }
             }
             const int idOut = idy * imgWidth + idx;
-            output[idOut].x = (uchar) clip(sum.x, 0.f, 255.f);
-            output[idOut].y = (uchar) clip(sum.y, 0.f, 255.f);
-            output[idOut].z = (uchar) clip(sum.z, 0.f, 255.f);
+            output[idOut].x = (uchar) device::clip(sum.x, 0.f, 255.f);
+            output[idOut].y = (uchar) device::clip(sum.y, 0.f, 255.f);
+            output[idOut].z = (uchar) device::clip(sum.z, 0.f, 255.f);
             output[idOut].w = 255;
         }
 
@@ -69,7 +70,7 @@ namespace IMAC {
         uchar4 *dev_input = nullptr;
         uchar4 *dev_output = nullptr;
 
-        ChronoGPU chrGPU;
+        chrono::ChronoGPU chrGPU;
 
         const size_t ImgSize = imgHeight * imgWidth;
         size_t ImgBytes = ImgSize * sizeof(uchar4);
@@ -102,17 +103,17 @@ namespace IMAC {
         /*********************************************************************************/
 
         /*********************************************************************************/
-        std::cout << "Copy data from host to device (input arrays) " << (ImgBytes >> 20) << " MB on Device"
+        std::cout << "Copy data from host to devices (input arrays) " << (ImgBytes >> 20) << " MB on Device"
                   << std::endl;
         chrGPU.start();
         HANDLE_ERROR(cudaMemcpy2D((void **) dev_input, pitch, (void **) inputImg.data(), spitch, widthBytes, height,
                                   cudaMemcpyHostToDevice));
         chrGPU.stop();
-        std::cout << "Put Matrix in device's constant memory " << (matBytes >> 20) << " MB on Device" << std::endl;
+        std::cout << "Put Matrix in devices's constant memory " << (matBytes >> 20) << " MB on Device" << std::endl;
         chrGPU.start();
         HANDLE_ERROR(cudaMemcpyToSymbol(mat, matConv.data(), matBytes));
         chrGPU.stop();
-        std::cout << "Bind 2D Texture with device Input " << (ImgBytes >> 20) << " MB on Device" << std::endl;
+        std::cout << "Bind 2D Texture with devices Input " << (ImgBytes >> 20) << " MB on Device" << std::endl;
         chrGPU.start();
         HANDLE_ERROR(cudaBindTexture2D(&offset, texInput, dev_input, channelDesc, width, height,
                                        pitch)); // pitch instead ImgBytes
@@ -133,7 +134,7 @@ namespace IMAC {
         cudaDeviceSynchronize();
 
         /*********************************************************************************/
-        std::cout << "Copy data from device to host (input arrays) " << (ImgBytes >> 20) << " MB on Device"
+        std::cout << "Copy data from devices to host (input arrays) " << (ImgBytes >> 20) << " MB on Device"
                   << std::endl;
         chrGPU.start();
         HANDLE_ERROR(cudaMemcpy(output.data(), dev_output, ImgBytes, cudaMemcpyDeviceToHost));
@@ -144,7 +145,7 @@ namespace IMAC {
         cudaFree(dev_input);
         cudaFree(dev_output);
 
-        compareImages(resultCPU, output);
+        utils::compareImages(resultCPU, output);
 
     }
 }

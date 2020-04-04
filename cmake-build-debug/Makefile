@@ -123,86 +123,59 @@ histogram/fast:
 	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/build
 .PHONY : histogram/fast
 
-src/chronoCPU.o: src/chronoCPU.cpp.o
+src/chrono/chronoCPU.o: src/chrono/chronoCPU.cpp.o
 
-.PHONY : src/chronoCPU.o
-
-# target to build an object file
-src/chronoCPU.cpp.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoCPU.cpp.o
-.PHONY : src/chronoCPU.cpp.o
-
-src/chronoCPU.i: src/chronoCPU.cpp.i
-
-.PHONY : src/chronoCPU.i
-
-# target to preprocess a source file
-src/chronoCPU.cpp.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoCPU.cpp.i
-.PHONY : src/chronoCPU.cpp.i
-
-src/chronoCPU.s: src/chronoCPU.cpp.s
-
-.PHONY : src/chronoCPU.s
-
-# target to generate assembly for a file
-src/chronoCPU.cpp.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoCPU.cpp.s
-.PHONY : src/chronoCPU.cpp.s
-
-src/chronoGPU.o: src/chronoGPU.cu.o
-
-.PHONY : src/chronoGPU.o
+.PHONY : src/chrono/chronoCPU.o
 
 # target to build an object file
-src/chronoGPU.cu.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoGPU.cu.o
-.PHONY : src/chronoGPU.cu.o
+src/chrono/chronoCPU.cpp.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o
+.PHONY : src/chrono/chronoCPU.cpp.o
 
-src/chronoGPU.i: src/chronoGPU.cu.i
+src/chrono/chronoCPU.i: src/chrono/chronoCPU.cpp.i
 
-.PHONY : src/chronoGPU.i
+.PHONY : src/chrono/chronoCPU.i
 
 # target to preprocess a source file
-src/chronoGPU.cu.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoGPU.cu.i
-.PHONY : src/chronoGPU.cu.i
+src/chrono/chronoCPU.cpp.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.i
+.PHONY : src/chrono/chronoCPU.cpp.i
 
-src/chronoGPU.s: src/chronoGPU.cu.s
+src/chrono/chronoCPU.s: src/chrono/chronoCPU.cpp.s
 
-.PHONY : src/chronoGPU.s
+.PHONY : src/chrono/chronoCPU.s
 
 # target to generate assembly for a file
-src/chronoGPU.cu.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chronoGPU.cu.s
-.PHONY : src/chronoGPU.cu.s
+src/chrono/chronoCPU.cpp.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.s
+.PHONY : src/chrono/chronoCPU.cpp.s
 
-src/conv_utils.o: src/conv_utils.cpp.o
+src/chrono/chronoGPU.o: src/chrono/chronoGPU.cu.o
 
-.PHONY : src/conv_utils.o
+.PHONY : src/chrono/chronoGPU.o
 
 # target to build an object file
-src/conv_utils.cpp.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/conv_utils.cpp.o
-.PHONY : src/conv_utils.cpp.o
+src/chrono/chronoGPU.cu.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o
+.PHONY : src/chrono/chronoGPU.cu.o
 
-src/conv_utils.i: src/conv_utils.cpp.i
+src/chrono/chronoGPU.i: src/chrono/chronoGPU.cu.i
 
-.PHONY : src/conv_utils.i
+.PHONY : src/chrono/chronoGPU.i
 
 # target to preprocess a source file
-src/conv_utils.cpp.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/conv_utils.cpp.i
-.PHONY : src/conv_utils.cpp.i
+src/chrono/chronoGPU.cu.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.i
+.PHONY : src/chrono/chronoGPU.cu.i
 
-src/conv_utils.s: src/conv_utils.cpp.s
+src/chrono/chronoGPU.s: src/chrono/chronoGPU.cu.s
 
-.PHONY : src/conv_utils.s
+.PHONY : src/chrono/chronoGPU.s
 
 # target to generate assembly for a file
-src/conv_utils.cpp.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/conv_utils.cpp.s
-.PHONY : src/conv_utils.cpp.s
+src/chrono/chronoGPU.cu.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.s
+.PHONY : src/chrono/chronoGPU.cu.s
 
 src/device/device.o: src/device/device.cu.o
 
@@ -230,6 +203,60 @@ src/device/device.s: src/device/device.cu.s
 src/device/device.cu.s:
 	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/device/device.cu.s
 .PHONY : src/device/device.cu.s
+
+src/histogram_normalizer.o: src/histogram_normalizer.cu.o
+
+.PHONY : src/histogram_normalizer.o
+
+# target to build an object file
+src/histogram_normalizer.cu.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o
+.PHONY : src/histogram_normalizer.cu.o
+
+src/histogram_normalizer.i: src/histogram_normalizer.cu.i
+
+.PHONY : src/histogram_normalizer.i
+
+# target to preprocess a source file
+src/histogram_normalizer.cu.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/histogram_normalizer.cu.i
+.PHONY : src/histogram_normalizer.cu.i
+
+src/histogram_normalizer.s: src/histogram_normalizer.cu.s
+
+.PHONY : src/histogram_normalizer.s
+
+# target to generate assembly for a file
+src/histogram_normalizer.cu.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/histogram_normalizer.cu.s
+.PHONY : src/histogram_normalizer.cu.s
+
+src/kernels/kernel.o: src/kernels/kernel.cu.o
+
+.PHONY : src/kernels/kernel.o
+
+# target to build an object file
+src/kernels/kernel.cu.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/kernels/kernel.cu.o
+.PHONY : src/kernels/kernel.cu.o
+
+src/kernels/kernel.i: src/kernels/kernel.cu.i
+
+.PHONY : src/kernels/kernel.i
+
+# target to preprocess a source file
+src/kernels/kernel.cu.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/kernels/kernel.cu.i
+.PHONY : src/kernels/kernel.cu.i
+
+src/kernels/kernel.s: src/kernels/kernel.cu.s
+
+.PHONY : src/kernels/kernel.s
+
+# target to generate assembly for a file
+src/kernels/kernel.cu.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/kernels/kernel.cu.s
+.PHONY : src/kernels/kernel.cu.s
 
 src/lodepng.o: src/lodepng.cpp.o
 
@@ -285,59 +312,86 @@ src/main.cu.s:
 	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/main.cu.s
 .PHONY : src/main.cu.s
 
-src/student4.o: src/student4.cu.o
+src/processing/process.o: src/processing/process.cu.o
 
-.PHONY : src/student4.o
-
-# target to build an object file
-src/student4.cu.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/student4.cu.o
-.PHONY : src/student4.cu.o
-
-src/student4.i: src/student4.cu.i
-
-.PHONY : src/student4.i
-
-# target to preprocess a source file
-src/student4.cu.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/student4.cu.i
-.PHONY : src/student4.cu.i
-
-src/student4.s: src/student4.cu.s
-
-.PHONY : src/student4.s
-
-# target to generate assembly for a file
-src/student4.cu.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/student4.cu.s
-.PHONY : src/student4.cu.s
-
-src/tools.o: src/tools.cpp.o
-
-.PHONY : src/tools.o
+.PHONY : src/processing/process.o
 
 # target to build an object file
-src/tools.cpp.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/tools.cpp.o
-.PHONY : src/tools.cpp.o
+src/processing/process.cu.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/processing/process.cu.o
+.PHONY : src/processing/process.cu.o
 
-src/tools.i: src/tools.cpp.i
+src/processing/process.i: src/processing/process.cu.i
 
-.PHONY : src/tools.i
+.PHONY : src/processing/process.i
 
 # target to preprocess a source file
-src/tools.cpp.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/tools.cpp.i
-.PHONY : src/tools.cpp.i
+src/processing/process.cu.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/processing/process.cu.i
+.PHONY : src/processing/process.cu.i
 
-src/tools.s: src/tools.cpp.s
+src/processing/process.s: src/processing/process.cu.s
 
-.PHONY : src/tools.s
+.PHONY : src/processing/process.s
 
 # target to generate assembly for a file
-src/tools.cpp.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/tools.cpp.s
-.PHONY : src/tools.cpp.s
+src/processing/process.cu.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/processing/process.cu.s
+.PHONY : src/processing/process.cu.s
+
+src/utils/conv_utils.o: src/utils/conv_utils.cpp.o
+
+.PHONY : src/utils/conv_utils.o
+
+# target to build an object file
+src/utils/conv_utils.cpp.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o
+.PHONY : src/utils/conv_utils.cpp.o
+
+src/utils/conv_utils.i: src/utils/conv_utils.cpp.i
+
+.PHONY : src/utils/conv_utils.i
+
+# target to preprocess a source file
+src/utils/conv_utils.cpp.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.i
+.PHONY : src/utils/conv_utils.cpp.i
+
+src/utils/conv_utils.s: src/utils/conv_utils.cpp.s
+
+.PHONY : src/utils/conv_utils.s
+
+# target to generate assembly for a file
+src/utils/conv_utils.cpp.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.s
+.PHONY : src/utils/conv_utils.cpp.s
+
+src/utils/tools.o: src/utils/tools.cpp.o
+
+.PHONY : src/utils/tools.o
+
+# target to build an object file
+src/utils/tools.cpp.o:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/tools.cpp.o
+.PHONY : src/utils/tools.cpp.o
+
+src/utils/tools.i: src/utils/tools.cpp.i
+
+.PHONY : src/utils/tools.i
+
+# target to preprocess a source file
+src/utils/tools.cpp.i:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/tools.cpp.i
+.PHONY : src/utils/tools.cpp.i
+
+src/utils/tools.s: src/utils/tools.cpp.s
+
+.PHONY : src/utils/tools.s
+
+# target to generate assembly for a file
+src/utils/tools.cpp.s:
+	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/utils/tools.cpp.s
+.PHONY : src/utils/tools.cpp.s
 
 # Help Target
 help:
@@ -348,30 +402,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... histogram"
-	@echo "... src/chronoCPU.o"
-	@echo "... src/chronoCPU.i"
-	@echo "... src/chronoCPU.s"
-	@echo "... src/chronoGPU.o"
-	@echo "... src/chronoGPU.i"
-	@echo "... src/chronoGPU.s"
-	@echo "... src/conv_utils.o"
-	@echo "... src/conv_utils.i"
-	@echo "... src/conv_utils.s"
+	@echo "... src/chrono/chronoCPU.o"
+	@echo "... src/chrono/chronoCPU.i"
+	@echo "... src/chrono/chronoCPU.s"
+	@echo "... src/chrono/chronoGPU.o"
+	@echo "... src/chrono/chronoGPU.i"
+	@echo "... src/chrono/chronoGPU.s"
 	@echo "... src/device/device.o"
 	@echo "... src/device/device.i"
 	@echo "... src/device/device.s"
+	@echo "... src/histogram_normalizer.o"
+	@echo "... src/histogram_normalizer.i"
+	@echo "... src/histogram_normalizer.s"
+	@echo "... src/kernels/kernel.o"
+	@echo "... src/kernels/kernel.i"
+	@echo "... src/kernels/kernel.s"
 	@echo "... src/lodepng.o"
 	@echo "... src/lodepng.i"
 	@echo "... src/lodepng.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/student4.o"
-	@echo "... src/student4.i"
-	@echo "... src/student4.s"
-	@echo "... src/tools.o"
-	@echo "... src/tools.i"
-	@echo "... src/tools.s"
+	@echo "... src/processing/process.o"
+	@echo "... src/processing/process.i"
+	@echo "... src/processing/process.s"
+	@echo "... src/utils/conv_utils.o"
+	@echo "... src/utils/conv_utils.i"
+	@echo "... src/utils/conv_utils.s"
+	@echo "... src/utils/tools.o"
+	@echo "... src/utils/tools.i"
+	@echo "... src/utils/tools.s"
 .PHONY : help
 
 

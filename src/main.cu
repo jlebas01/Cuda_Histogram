@@ -16,9 +16,9 @@
 #include <algorithm>
 
 #include <histogram_normalizer.hpp>
-#include <chronoCPU.hpp>
+#include <chrono/chronoCPU.hpp>
 #include <lodepng.h>
-#include <conv_utils.hpp>
+#include <utils/conv_utils.hpp>
 
 namespace IMAC
 {
