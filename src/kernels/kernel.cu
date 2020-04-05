@@ -75,11 +75,12 @@ namespace kernel {
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            uchar4 imgInput =  tex2D(texInput, float(idx)+0.5f, float(idy)+0.5f);
+            //uchar4 imgInput =  tex2D(texInput, float(idx)+0.5f, float(idy)+0.5f);
+            uchar4 imgInput =  tex2D(texInput, float(idx), float(idy));
             //printf("idx : %f, idy : %f\n", idx+0.5f, idy+0.5f);
 
 //            uchar4 imgInput = make_uchar4(0.0f, 0.0f, 0.0f, 0.0f);
-            printf("imgInput : %d %d %d %d \n", imgInput.x, imgInput.y, imgInput.z, imgInput.w);
+           // printf("imgInput : %f %d %d %d \n", imgInput.x, imgInput.y, imgInput.z, imgInput.w);
 
             RGBcolorNomalized = normalizeRGB(imgInput.x, imgInput.y, imgInput.z, imgInput.w);
 

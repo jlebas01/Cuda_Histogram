@@ -270,7 +270,7 @@ namespace process {
 
         std::vector<float4> outputF4(imgWidth*imgHeight);
         std::vector<float4> inputF4(imgWidth*imgHeight);
-
+        std::cout << imgWidth << " : " << imgHeight << std::endl;
         processNormalizer(inputImg,imgWidth,imgHeight,outputF4);
 
         inputF4.swap(outputF4);

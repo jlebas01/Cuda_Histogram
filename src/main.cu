@@ -97,16 +97,18 @@ namespace IMAC
 	// Main function
 	void main(int argc, char **argv) 
 	{	
-		char fileName[2048];
+		char * fileName= "../images/chateau.png";
 		uint convType;
+
 		// Parse command line
-		if (argc != 5)
+		/*if (argc != 5)
 		{
 			std::cerr << "Wrong number of argument" << std::endl;
 			printUsageAndExit(argv[0]);
-		}
+		}*/
 
-		for (int i = 1; i < argc; ++i) 
+
+		/*for (int i = 1; i < argc; ++i)
 		{
 			if (!strcmp(argv[i], "-f")) 
 			{
@@ -128,7 +130,7 @@ namespace IMAC
 			{
 				printUsageAndExit(argv[0]);
 			}
-		}
+		}*/
 		
 		// Get input image
 		std::vector<uint8_t> inputUchar;
@@ -156,9 +158,9 @@ namespace IMAC
 		std::cout << "Image has " << imgWidth << " x " << imgHeight << " pixels (RGBA)" << std::endl;
 
 		// Init convolution matrix
-		std::vector<float> matConv;
+		/*std::vector<float> matConv;
 		uint matSize;
-		utils::initConvolutionMatrix(convType, matConv, matSize);
+		utils::initConvolutionMatrix(convType, matConv, matSize);*/
 
 		// Create 2 output images
 		std::vector<uchar4> outputCPU(imgWidth * imgHeight);
@@ -177,14 +179,14 @@ namespace IMAC
 		std::string outputGPUName = name + convStr + "_GPU" + ext;
 
 		// Computation on CPU
-		convCPU(input, imgWidth, imgHeight, matConv, matSize, outputCPU);
+		/*convCPU(input, imgWidth, imgHeight, matConv, matSize, outputCPU);
 		
 		std::cout << "Save image as: " << outputCPUName << std::endl;
 		error = lodepng::encode(outputCPUName, reinterpret_cast<uint8_t *>(outputCPU.data()), imgWidth, imgHeight, LCT_RGBA);
 		if (error)
 		{
 			throw std::runtime_error("Error loadpng::encode: " + std::string(lodepng_error_text(error)));
-		}
+		}*/
 		
 		std::cout 	<< "============================================"	<< std::endl
 					<< "              STUDENT'S JOB !               "	<< std::endl

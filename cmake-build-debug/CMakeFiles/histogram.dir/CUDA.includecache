@@ -6,8 +6,10 @@
 
 #IncludeRegexTransform: 
 
-../include/chrono/chronoGPU.hpp
-driver_types.h
+../include/chrono/chronoCPU.hpp
+windows.h
+-
+sys/time.h
 -
 
 ../include/kernels/kernel.hpp
@@ -29,6 +31,20 @@ cstdint
 -
 utils/common.hpp
 -
+
+../include/lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+../include/lodepng.h
+iostream
+-
+lodepng.h
+../include/lodepng.h
 
 ../include/processing/process.hpp
 vector
@@ -60,29 +76,37 @@ device_launch_parameters.h
 cuda_runtime_api.h
 -
 
-../include/utils/tools.hpp
-iostream
--
-cmath
--
-algorithm
+../include/utils/conv_utils.hpp
+string
 -
 vector
 -
-vector_types.h
--
 
-/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu
+/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu
 iostream
 -
-utils/tools.hpp
+cstdlib
 -
-utils/common.hpp
+cstdio
+-
+iomanip
+-
+cstring
+-
+exception
+-
+algorithm
+-
+cstdint
+-
+chrono/chronoCPU.hpp
 -
 processing/process.hpp
 -
-chrono/chronoGPU.hpp
--
 kernels/kernel.hpp
+-
+lodepng.h
+-
+utils/conv_utils.hpp
 -
 
