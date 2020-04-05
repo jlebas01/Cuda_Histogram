@@ -7,9 +7,9 @@
 
 namespace kernel {
 
-    __device__ float4 fHSV_from_RGB(float r, float g, float b) {
+    __device__ float4 fHSV_from_RGB(float r, float g, float b, float a) {
         float M = 0.0f, m = 0.0f, c = 0.0f;
-        float4 HSVcolor = make_float4(0.f, 0.f, 0.f, 255.0f); //x : Hue, y : Saturation, z : Value, w : Opacity
+        float4 HSVcolor = make_float4(0.f, 0.f, 0.f, a); //x : Hue, y : Saturation, z : Value, w : Opacity
         M = fmax(r, fmax(g, b));
         m = fmin(r, fmin(g, b));
         c = M - m;
@@ -30,9 +30,9 @@ namespace kernel {
         return HSVcolor;
     }
 
-    __device__ float4 fRGB_from_HSV(float h, float s, float v) {
+    __device__ float4 fRGB_from_HSV(float h, float s, float v, float a) {
         float c = 0.0f, m = 0.0f, x = 0.0f;
-        float4 color = make_float4(0.f, 0.f, 0.f, 1.0f);
+        float4 color = make_float4(0.f, 0.f, 0.f, a);
         // if (Hsv_IsValid(h, s, v) == true) {
         c = v * s;
         x = c * (1.0f - fabs(fmod(h / 60.0f, 2.0f) - 1.0f));
@@ -75,17 +75,18 @@ namespace kernel {
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            //uchar4 imgInput =  tex2D(texInput, idx, idy);
+            uchar4 imgInput =  tex2D(texInput, float(idx)+0.5f, float(idy)+0.5f);
+            //printf("idx : %f, idy : %f\n", idx+0.5f, idy+0.5f);
 
-            uchar4 imgInput = make_uchar4(0.0f, 0.0f, 0.0f, 0.0f);
+//            uchar4 imgInput = make_uchar4(0.0f, 0.0f, 0.0f, 0.0f);
+            printf("imgInput : %d %d %d %d \n", imgInput.x, imgInput.y, imgInput.z, imgInput.w);
 
             RGBcolorNomalized = normalizeRGB(imgInput.x, imgInput.y, imgInput.z, imgInput.w);
 
+            //printf("RGBcolorNormalized : %f %f %f %f \n", RGBcolorNomalized.x, RGBcolorNomalized.y, RGBcolorNomalized.z, RGBcolorNomalized.w);
+
             const uint32_t idOut = idy * imgWidth + idx;
-            output[idOut].x = static_cast<uint8_t>(RGBcolorNomalized.x);
-            output[idOut].y = static_cast<uint8_t>(RGBcolorNomalized.y);
-            output[idOut].z = static_cast<uint8_t>(RGBcolorNomalized.z);
-            output[idOut].w = static_cast<uint8_t>(RGBcolorNomalized.w);
+            output[idOut] = RGBcolorNomalized;
         }
     }
 
@@ -98,11 +99,13 @@ namespace kernel {
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            //float4 imgNormalized = tex2D(ImgNormalized, idx, idy);
+            float4 imgNormalized = tex2D(ImgNormalized, idx +0.5f, idy+0.5f);
 
-            float4 imgNormalized = make_float4(0.0f, 0.0f, 0.0f, 0.0f);
+            //float4 imgNormalized = make_float4(0.0f, 0.0f, 0.0f, 0.0f);
 
-            HSVColor = fHSV_from_RGB(imgNormalized.x, imgNormalized.y, imgNormalized.z);
+            HSVColor = fHSV_from_RGB(imgNormalized.x, imgNormalized.y, imgNormalized.z, imgNormalized.w);
+
+            //printf("HSVColor : %f %f %f %f \n", imgNormalized.x, imgNormalized.y, imgNormalized.z, imgNormalized.w);
 
             const uint32_t idOut = idy * imgWidth + idx;
             output[idOut].x = static_cast<float>(HSVColor.x);
@@ -121,11 +124,11 @@ namespace kernel {
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            //float4 imgHSV = tex2D<float4>(ImgHSV, idx, idy);
+            float4 imgHSV = tex2D(ImgHSV, idx+0.5f, idy+0.5f);
 
-            float4 imgHSV =make_float4(0.0f, 0.0f, 0.0f, 0.0f);
+            //float4 imgHSV =make_float4(0.0f, 0.0f, 0.0f, 0.0f);
 
-            RGBColor = fRGB_from_HSV(imgHSV.x, imgHSV.y, imgHSV.z);
+            RGBColor = fRGB_from_HSV(imgHSV.x, imgHSV.y, imgHSV.z, imgHSV.w);
 
             const uint32_t idOut = idy * imgWidth + idx;
             output[idOut].x = static_cast<uint8_t>(RGBColor.x*255.f);

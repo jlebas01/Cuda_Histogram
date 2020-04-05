@@ -20,9 +20,9 @@
 
 namespace kernel {
 
-    __device__ float4 fHSV_from_RGB(float r, float g, float b);
+    __device__ float4 fHSV_from_RGB(float r, float g, float b, float a);
 
-    __device__ float4 fRGB_from_HSV(float h, float s, float v);
+    __device__ float4 fRGB_from_HSV(float h, float s, float v, float a);
 
     __device__ float clip(float n, float lower, float upper);
 

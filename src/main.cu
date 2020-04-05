@@ -22,7 +22,7 @@
 #include <lodepng.h>
 #include <utils/conv_utils.hpp>
 
-/*namespace IMAC
+namespace IMAC
 {
 	// Print program usage
 	void printUsageAndExit(const char *prg) 
@@ -35,7 +35,7 @@
 					<< " \t --- " << utils::EDGE_DETECTION_7x7 << " = Edge detection 7x7" << std::endl
 					<< " \t --- " << utils::MOTION_BLUR_15x15 << " = Motion Blur 15x15" << std::endl << std::endl;
 		exit(EXIT_FAILURE);
-	}process
+	}
 
 	float clampf(const float val, const float min , const float max) 
 	{
@@ -100,7 +100,7 @@
 		char fileName[2048];
 		uint convType;
 		// Parse command line
-		if (argc != 5) 
+		if (argc != 5)
 		{
 			std::cerr << "Wrong number of argument" << std::endl;
 			printUsageAndExit(argv[0]);
@@ -201,17 +201,18 @@
 		
 		std::cout << "============================================"	<< std::endl << std::endl;
 	}
-}*/
+}
 
 int main(int argc, char **argv) 
 {
-	/*try
+	try
 	{
 		IMAC::main(argc, argv);
 	}
 	catch (const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
-	}*/
+	}
+
 	exit(EXIT_SUCCESS);
 }

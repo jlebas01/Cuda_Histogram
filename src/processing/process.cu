@@ -37,10 +37,10 @@ namespace process {
         size_t pitch;
         size_t spitch = widthBytes;
 
-        kernel::texInput.addressMode[0] = cudaAddressModeBorder;
+        /*kernel::texInput.addressMode[0] = cudaAddressModeBorder;
         kernel::texInput.addressMode[1] = cudaAddressModeBorder;
         kernel::texInput.filterMode = cudaFilterModePoint;
-        kernel::texInput.normalized = false;
+        kernel::texInput.normalized = false;*/
 
         cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc<uchar4>();
 
@@ -60,6 +60,9 @@ namespace process {
         /*********************************************************************************/
         std::cout << "Copy data from host to devices (input arrays) " << (ImgBytes >> 20) << " MB on Device"
                   << std::endl;
+       /* for (auto &it : inputImg){
+            std::cout << static_cast<int>(it.x) << " " << static_cast<int>(it.y) << " " << static_cast<int>(it.z) << std::endl;
+        }*/
         chrGPU.start();
         HANDLE_ERROR(cudaMemcpy2D((void **) dev_inputU4, pitch, (void **) inputImg.data(), spitch, widthBytes, height,
                                   cudaMemcpyHostToDevice));
@@ -82,11 +85,11 @@ namespace process {
         cudaDeviceSynchronize();
 
         /*********************************************************************************/
-        std::cout << "Copy data from devices to host (input arrays) " << (ImgBytes >> 20) << " MB on Device"
+        std::cout << "Copy data from devices to host (output arrays) " << (ImgBytes >> 20) << " MB on Device"
                   << std::endl;
-        chrGPU.start();
+        //chrGPU.start();
         HANDLE_ERROR(cudaMemcpy(output.data(), dev_outputF4, ImgBytes, cudaMemcpyDeviceToHost));
-        chrGPU.stop();
+        //chrGPU.stop();
         std::cout << " -> Done : " << chrGPU.elapsedTime() << " ms" << std::endl << std::endl;
         /***********************************************outputArray**********************************/
 
@@ -265,8 +268,8 @@ namespace process {
                  std::vector<uchar4> &output // Output image
     ) {
 
-        std::vector<float4> outputF4;
-        std::vector<float4> inputF4;
+        std::vector<float4> outputF4(imgWidth*imgHeight);
+        std::vector<float4> inputF4(imgWidth*imgHeight);
 
         processNormalizer(inputImg,imgWidth,imgHeight,outputF4);
 
