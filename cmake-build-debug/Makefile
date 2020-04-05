@@ -177,33 +177,6 @@ src/chrono/chronoGPU.cu.s:
 	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.s
 .PHONY : src/chrono/chronoGPU.cu.s
 
-src/device/device.o: src/device/device.cu.o
-
-.PHONY : src/device/device.o
-
-# target to build an object file
-src/device/device.cu.o:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/device/device.cu.o
-.PHONY : src/device/device.cu.o
-
-src/device/device.i: src/device/device.cu.i
-
-.PHONY : src/device/device.i
-
-# target to preprocess a source file
-src/device/device.cu.i:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/device/device.cu.i
-.PHONY : src/device/device.cu.i
-
-src/device/device.s: src/device/device.cu.s
-
-.PHONY : src/device/device.s
-
-# target to generate assembly for a file
-src/device/device.cu.s:
-	$(MAKE) -f CMakeFiles/histogram.dir/build.make CMakeFiles/histogram.dir/src/device/device.cu.s
-.PHONY : src/device/device.cu.s
-
 src/kernels/kernel.o: src/kernels/kernel.cu.o
 
 .PHONY : src/kernels/kernel.o
@@ -381,9 +354,6 @@ help:
 	@echo "... src/chrono/chronoGPU.o"
 	@echo "... src/chrono/chronoGPU.i"
 	@echo "... src/chrono/chronoGPU.s"
-	@echo "... src/device/device.o"
-	@echo "... src/device/device.i"
-	@echo "... src/device/device.s"
 	@echo "... src/kernels/kernel.o"
 	@echo "... src/kernels/kernel.i"
 	@echo "... src/kernels/kernel.s"

@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/c++   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -o CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoCPU.cpp"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/c++   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -o CMakeFiles/histogram.dir/src/lodepng.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/lodepng.cpp"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/c++   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -o CMakeFiles/histogram.dir/src/utils/conv_utils.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/conv_utils.cpp"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/c++   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -o CMakeFiles/histogram.dir/src/utils/tools.cpp.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/utils/tools.cpp"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/nvcc   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -std=c++11 -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu -o CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/nvcc   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -std=c++11 -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/devices/device.cu -o CMakeFiles/histogram.dir/src/devices/device.cu.o",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/devices/device.cu"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/nvcc   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -std=c++11 -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu -o CMakeFiles/histogram.dir/src/kernels/kernel.cu.o",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/nvcc   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -std=c++11 -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu -o CMakeFiles/histogram.dir/src/main.cu.o",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu"
+},
+{
+  "directory": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/build",
+  "command": "/usr/bin/nvcc   -I/home/jlebas01/M2/GPGPU/TP4_GPGPU/include  -g   -g -O3 -std=c++11 -x cu -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu -o CMakeFiles/histogram.dir/src/processing/process.cu.o",
+  "file": "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu"
+}
+]

@@ -11,17 +11,22 @@
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
 
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <stdexcept>
-#include <cuda.h>
 #include <cuda_runtime.h>
-#include <device_launch_parameters.h>
-#include <math_functions.h>
+#include <vector_types.h>
+#include <cstdint>
+
+#include <utils/common.hpp>
 
 
 namespace kernel {
+
+    __device__ float4 fHSV_from_RGB(float r, float g, float b);
+
+    __device__ float4 fRGB_from_HSV(float h, float s, float v);
+
+    __device__ float clip(float n, float lower, float upper);
+
+    __device__ float4 normalizeRGB(float r, float g, float b, float o);
 
     texture<uchar4, cudaTextureType2D, cudaReadModeElementType> texInput;
 

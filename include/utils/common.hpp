@@ -8,7 +8,7 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
-#include <math_functions.h>
+#include <cuda_runtime_api.h>
 
 typedef unsigned char uchar;
 typedef unsigned int uint;

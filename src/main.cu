@@ -19,7 +19,6 @@
 #include <chrono/chronoCPU.hpp>
 #include <processing/process.hpp>
 #include <kernels/kernel.hpp>
-#include <devices/device.hpp>
 #include <lodepng.h>
 #include <utils/conv_utils.hpp>
 
@@ -36,7 +35,7 @@
 					<< " \t --- " << utils::EDGE_DETECTION_7x7 << " = Edge detection 7x7" << std::endl
 					<< " \t --- " << utils::MOTION_BLUR_15x15 << " = Motion Blur 15x15" << std::endl << std::endl;
 		exit(EXIT_FAILURE);
-	}
+	}process
 
 	float clampf(const float val, const float min , const float max) 
 	{

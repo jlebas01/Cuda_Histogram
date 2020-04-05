@@ -5,18 +5,15 @@ CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o: ../include/chrono/chronoGPU.
 CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o: ../include/utils/common.hpp
 CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o: ../src/chrono/chronoGPU.cu
 
-CMakeFiles/histogram.dir/src/device/device.cu.o: ../include/devices/device.hpp
-CMakeFiles/histogram.dir/src/device/device.cu.o: ../src/device/device.cu
-
-CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: ../include/devices/device.hpp
 CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: ../include/kernels/kernel.hpp
+CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: ../include/utils/common.hpp
 CMakeFiles/histogram.dir/src/kernels/kernel.cu.o: ../src/kernels/kernel.cu
 
 CMakeFiles/histogram.dir/src/main.cu.o: ../include/chrono/chronoCPU.hpp
-CMakeFiles/histogram.dir/src/main.cu.o: ../include/devices/device.hpp
 CMakeFiles/histogram.dir/src/main.cu.o: ../include/kernels/kernel.hpp
 CMakeFiles/histogram.dir/src/main.cu.o: ../include/lodepng.h
 CMakeFiles/histogram.dir/src/main.cu.o: ../include/processing/process.hpp
+CMakeFiles/histogram.dir/src/main.cu.o: ../include/utils/common.hpp
 CMakeFiles/histogram.dir/src/main.cu.o: ../include/utils/conv_utils.hpp
 CMakeFiles/histogram.dir/src/main.cu.o: ../src/main.cu
 

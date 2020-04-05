@@ -92,9 +92,6 @@
 		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/chrono/chronoGPU.hpp">
 			<Option target="histogram"/>
 		</Unit>
-		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/devices/device.hpp">
-			<Option target="histogram"/>
-		</Unit>
 		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/include/kernels/kernel.hpp">
 			<Option target="histogram"/>
 		</Unit>
@@ -114,9 +111,6 @@
 			<Option target="histogram"/>
 		</Unit>
 		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu">
-			<Option target="histogram"/>
-		</Unit>
-		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/device/device.cu">
 			<Option target="histogram"/>
 		</Unit>
 		<Unit filename="/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu">

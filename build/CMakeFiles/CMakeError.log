@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55fb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55fb6.dir/build.make CMakeFiles/cmTC_55fb6.dir/build
+make[1] : on entre dans le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_55fb6.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_55fb6.dir/CheckSymbolExists.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_55fb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55fb6.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_55fb6.dir/CheckSymbolExists.cxx.o  -o cmTC_55fb6 
+/usr/bin/ld : CMakeFiles/cmTC_55fb6.dir/CheckSymbolExists.cxx.o : dans la fonction « main » :
+CheckSymbolExists.cxx:(.text+0x1f) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_55fb6.dir/build.make:87: cmTC_55fb6] Error 1
+make[1] : on quitte le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121: cmTC_55fb6/fast] Error 2
+
+File /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_479bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_479bf.dir/build.make CMakeFiles/cmTC_479bf.dir/build
+make[1] : on entre dans le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_479bf.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_479bf.dir/CheckFunctionExists.cxx.o -c /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_479bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_479bf.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_479bf.dir/CheckFunctionExists.cxx.o  -o cmTC_479bf -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_479bf.dir/build.make:87: cmTC_479bf] Error 1
+make[1] : on quitte le répertoire « /home/jlebas01/M2/GPGPU/TP4_GPGPU/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121: cmTC_479bf/fast] Error 2
+
+

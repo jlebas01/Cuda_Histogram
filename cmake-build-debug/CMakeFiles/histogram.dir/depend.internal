@@ -5,19 +5,16 @@ CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o
  ../include/chrono/chronoGPU.hpp
  ../include/utils/common.hpp
  /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu
-CMakeFiles/histogram.dir/src/device/device.cu.o
- ../include/devices/device.hpp
- /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/device/device.cu
 CMakeFiles/histogram.dir/src/kernels/kernel.cu.o
- ../include/devices/device.hpp
  ../include/kernels/kernel.hpp
+ ../include/utils/common.hpp
  /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu
 CMakeFiles/histogram.dir/src/main.cu.o
  ../include/chrono/chronoCPU.hpp
- ../include/devices/device.hpp
  ../include/kernels/kernel.hpp
  ../include/lodepng.h
  ../include/processing/process.hpp
+ ../include/utils/common.hpp
  ../include/utils/conv_utils.hpp
  /home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu
 CMakeFiles/histogram.dir/src/processing/process.cu.o
