@@ -3,8 +3,8 @@
 * Author: Maxime MARIA
 */
 
-#include "chrono/chronoGPU.hpp"
-#include "utils/common.hpp"
+#include <chrono/chronoGPU.hpp>
+#include <utils/common.hpp>
 #include <iostream>
 namespace chrono {
     ChronoGPU::ChronoGPU()

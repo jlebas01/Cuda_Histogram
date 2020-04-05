@@ -10,12 +10,13 @@ namespace kernel {
     normalizePixel(const size_t imgWidth, const size_t imgHeight, float4 *output) {
         uint32_t idx = (blockIdx.x * blockDim.x + threadIdx.x);
         uint32_t idy = (blockIdx.y * blockDim.y + threadIdx.y);
+        //uchar4 imgInput = make_uchar4(0.0f, 0.0f, 0.0f, 0.0f);
 
         float4 RGBcolorNomalized = make_float4(0.0f, 0.0f, 0.0f, 0.0f);
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            uchar4 imgInput = tex2D(texInput, idx, idy);
+            uchar4 imgInput =  tex2D(texInput, idx, idy);
 
             RGBcolorNomalized = device::normalizeRGB(imgInput.x, imgInput.y, imgInput.z, imgInput.w);
 
@@ -57,7 +58,7 @@ namespace kernel {
 
         if (idx < imgWidth && idy < imgHeight) {
 
-            float4 imgHSV = tex2D(ImgHSV, idx, idy);
+            float4 imgHSV = tex2D<float4>(ImgHSV, idx, idy);
 
             RGBColor = device::fRGB_from_HSV(imgHSV.x, imgHSV.y, imgHSV.z);
 

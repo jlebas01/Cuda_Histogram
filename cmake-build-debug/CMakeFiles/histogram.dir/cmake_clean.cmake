@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/histogram.dir/src/chrono/chronoCPU.cpp.o"
   "CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o"
   "CMakeFiles/histogram.dir/src/device/device.cu.o"
-  "CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o"
   "CMakeFiles/histogram.dir/src/kernels/kernel.cu.o"
   "CMakeFiles/histogram.dir/src/lodepng.cpp.o"
   "CMakeFiles/histogram.dir/src/main.cu.o"

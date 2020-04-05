@@ -5,6 +5,9 @@
 
 #ifndef __CHRONO_GPU_HPP
 #define __CHRONO_GPU_HPP
+
+#include <driver_types.h>
+
 namespace chrono {
     class ChronoGPU {
     private:

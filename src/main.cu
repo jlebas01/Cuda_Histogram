@@ -15,12 +15,15 @@
 #include <exception>
 #include <algorithm>
 
-#include <histogram_normalizer.hpp>
+#include <cstdint>
 #include <chrono/chronoCPU.hpp>
+#include <processing/process.hpp>
+#include <kernels/kernel.hpp>
+#include <devices/device.hpp>
 #include <lodepng.h>
 #include <utils/conv_utils.hpp>
 
-namespace IMAC
+/*namespace IMAC
 {
 	// Print program usage
 	void printUsageAndExit(const char *prg) 
@@ -28,10 +31,10 @@ namespace IMAC
 		std::cerr	<< "Usage: " << prg << std::endl
 					<< " \t -f <F>: <F> image file name (required)" << std::endl
 					<< " \t -c <C>: <C> convolution type (required)" << std::endl 
-					<< " \t --- " << BUMP_3x3 << " = Bump 3x3" << std::endl
-					<< " \t --- " << SHARPEN_5x5 << " = Sharpen 5x5" << std::endl
-					<< " \t --- " << EDGE_DETECTION_7x7 << " = Edge detection 7x7" << std::endl
-					<< " \t --- " << MOTION_BLUR_15x15 << " = Motion Blur 15x15" << std::endl << std::endl;
+					<< " \t --- " << utils::BUMP_3x3 << " = Bump 3x3" << std::endl
+					<< " \t --- " << utils::SHARPEN_5x5 << " = Sharpen 5x5" << std::endl
+					<< " \t --- " << utils::EDGE_DETECTION_7x7 << " = Edge detection 7x7" << std::endl
+					<< " \t --- " << utils::MOTION_BLUR_15x15 << " = Motion Blur 15x15" << std::endl << std::endl;
 		exit(EXIT_FAILURE);
 	}
 
@@ -45,7 +48,7 @@ namespace IMAC
 					std::vector<uchar4> &output)
 	{
 		std::cout << "Process on CPU (sequential)"	<< std::endl;
-		ChronoCPU chrCPU;
+		chrono::ChronoCPU chrCPU;
 		chrCPU.start();
 		for ( uint y = 0; y < imgHeight; ++y )
 		{
@@ -82,9 +85,9 @@ namespace IMAC
 					}
 				}
 				const int idOut = y * imgWidth + x;
-				output[idOut].x = (uchar)clampf( sum.x, 0.f, 255.f );
-				output[idOut].y = (uchar)clampf( sum.y, 0.f, 255.f );
-				output[idOut].z = (uchar)clampf( sum.z, 0.f, 255.f );
+				output[idOut].x = (uint8_t)clampf( sum.x, 0.f, 255.f );
+				output[idOut].y = (uint8_t)clampf( sum.y, 0.f, 255.f );
+				output[idOut].z = (uint8_t)clampf( sum.z, 0.f, 255.f );
 				output[idOut].w = 255;
 			}
 		}
@@ -129,7 +132,7 @@ namespace IMAC
 		}
 		
 		// Get input image
-		std::vector<uchar> inputUchar;
+		std::vector<uint8_t> inputUchar;
 		uint imgWidth;
 		uint imgHeight;
 
@@ -156,7 +159,7 @@ namespace IMAC
 		// Init convolution matrix
 		std::vector<float> matConv;
 		uint matSize;
-		initConvolutionMatrix(convType, matConv, matSize);
+		utils::initConvolutionMatrix(convType, matConv, matSize);
 
 		// Create 2 output images
 		std::vector<uchar4> outputCPU(imgWidth * imgHeight);
@@ -170,7 +173,7 @@ namespace IMAC
 		std::size_t lastPoint = fileNameStr.find_last_of(".");
 		std::string ext = fileNameStr.substr(lastPoint);
 		std::string name = fileNameStr.substr(0,lastPoint);
-		std::string convStr = convertConvTypeToString(convType);
+		std::string convStr = utils::convertConvTypeToString(convType);
 		std::string outputCPUName = name + convStr + "_CPU" + ext;
 		std::string outputGPUName = name + convStr + "_GPU" + ext;
 
@@ -178,7 +181,7 @@ namespace IMAC
 		convCPU(input, imgWidth, imgHeight, matConv, matSize, outputCPU);
 		
 		std::cout << "Save image as: " << outputCPUName << std::endl;
-		error = lodepng::encode(outputCPUName, reinterpret_cast<uchar *>(outputCPU.data()), imgWidth, imgHeight, LCT_RGBA);
+		error = lodepng::encode(outputCPUName, reinterpret_cast<uint8_t *>(outputCPU.data()), imgWidth, imgHeight, LCT_RGBA);
 		if (error)
 		{
 			throw std::runtime_error("Error loadpng::encode: " + std::string(lodepng_error_text(error)));
@@ -188,10 +191,10 @@ namespace IMAC
 					<< "              STUDENT'S JOB !               "	<< std::endl
 					<< "============================================"	<< std::endl;
 
-		studentJob(input, imgWidth, imgHeight, matConv, matSize, outputCPU, outputGPU);
+		process::process(input, imgWidth, imgHeight, outputCPU, outputGPU);
 
 		std::cout << "Save image as: " << outputGPUName << std::endl;
-		error = lodepng::encode(outputGPUName, reinterpret_cast<uchar *>(outputGPU.data()), imgWidth, imgHeight, LCT_RGBA);
+		error = lodepng::encode(outputGPUName, reinterpret_cast<uint8_t *>(outputGPU.data()), imgWidth, imgHeight, LCT_RGBA);
 		if (error)
 		{
 			throw std::runtime_error("Error loadpng::decode: " + std::string(lodepng_error_text(error)));
@@ -199,16 +202,17 @@ namespace IMAC
 		
 		std::cout << "============================================"	<< std::endl << std::endl;
 	}
-}
+}*/
 
 int main(int argc, char **argv) 
 {
-	try
+	/*try
 	{
 		IMAC::main(argc, argv);
 	}
 	catch (const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
-	}
+	}*/
+	exit(EXIT_SUCCESS);
 }

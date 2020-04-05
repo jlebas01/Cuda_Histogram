@@ -183,7 +183,7 @@ namespace process {
                            std::vector<uchar4> &output) {
 
         float4 *dev_inputF4 = nullptr;
-        uchar4 *dev_outputF4 = nullptr;
+        uchar4 *dev_outputU4 = nullptr;
 
         chrono::ChronoGPU chrGPU;
 
@@ -199,10 +199,10 @@ namespace process {
         size_t pitch;
         size_t spitch = widthBytes;
 
-        kernel::ImgNormalized.addressMode[0] = cudaAddressModeBorder;
-        kernel::ImgNormalized.addressMode[1] = cudaAddressModeBorder;
-        kernel::ImgNormalized.filterMode = cudaFilterModePoint;
-        kernel::ImgNormalized.normalized = false;
+        kernel::ImgHSV.addressMode[0] = cudaAddressModeBorder;
+        kernel::ImgHSV.addressMode[1] = cudaAddressModeBorder;
+        kernel::ImgHSV.filterMode = cudaFilterModePoint;
+        kernel::ImgHSV.normalized = false;
 
         cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc<float4>();
 
@@ -213,7 +213,7 @@ namespace process {
         /*********************************************************************************/
         std::cout << "Allocating arrays: " << (ImgBytes >> 20) << " MB on Device" << std::endl;
         chrGPU.start();
-        HANDLE_ERROR(cudaMalloc((void **) &dev_outputF4, ImgBytes));
+        HANDLE_ERROR(cudaMalloc((void **) &dev_outputU4, ImgBytes));
         HANDLE_ERROR(cudaMallocPitch((void **) &dev_inputF4, &pitch, widthBytes, height));
         chrGPU.stop();
         std::cout << " -> Done : " << chrGPU.elapsedTime() << " ms" << std::endl << std::endl;
@@ -228,7 +228,7 @@ namespace process {
         chrGPU.stop();
         std::cout << "Bind 2D Texture with devices Input " << (ImgBytes >> 20) << " MB on Device" << std::endl;
         chrGPU.start();
-        HANDLE_ERROR(cudaBindTexture2D(&offset, kernel::ImgNormalized, dev_inputF4, channelDesc, width, height,
+        HANDLE_ERROR(cudaBindTexture2D(&offset, kernel::ImgHSV, dev_inputF4, channelDesc, width, height,
                                        pitch)); // pitch instead ImgBytes
         chrGPU.stop();
         std::cout << " -> Done : " << chrGPU.elapsedTime() << " ms" << std::endl << std::endl;
@@ -238,7 +238,7 @@ namespace process {
         std::cout << "Process on GPU -- Kernel " << std::endl;
         std::cout << "width : " << width << "height : " << height << std::endl;
         chrGPU.start();
-        kernel::HSV_to_RGB <<< dim3(blockSizeX, blockSizeY), dim3(32, 32) >>> (width, height, dev_outputF4);
+        kernel::HSV_to_RGB <<< dim3(blockSizeX, blockSizeY), dim3(32, 32) >>> (width, height, dev_outputU4);
         chrGPU.stop();
         std::cout << " -> Done : " << chrGPU.elapsedTime() << " ms" << std::endl << std::endl;
         cudaDeviceSynchronize();
@@ -247,20 +247,21 @@ namespace process {
         std::cout << "Copy data from devices to host (input arrays) " << (ImgBytes >> 20) << " MB on Device"
                   << std::endl;
         chrGPU.start();
-        HANDLE_ERROR(cudaMemcpy(output.data(), dev_outputF4, ImgBytes, cudaMemcpyDeviceToHost));
+        HANDLE_ERROR(cudaMemcpy(output.data(), dev_outputU4, ImgBytes, cudaMemcpyDeviceToHost));
         chrGPU.stop();
         std::cout << " -> Done : " << chrGPU.elapsedTime() << " ms" << std::endl << std::endl;
         /***********************************************outputArray**********************************/
 
         /**FREE**AND**UNBIND**/
-        cudaUnbindTexture(kernel::ImgNormalized);
+        cudaUnbindTexture(kernel::ImgHSV);
 
         cudaFree(dev_inputF4);
-        cudaFree(dev_outputF4);
+        cudaFree(dev_outputU4);
     }
 
     void process(const std::vector<uchar4> &inputImg, // Input image
                  const uint imgWidth, const uint imgHeight, // Image size
+                 const std::vector<uchar4> &resultCPU, // Just for comparison
                  std::vector<uchar4> &output // Output image
     ) {
 

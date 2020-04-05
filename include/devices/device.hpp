@@ -7,6 +7,7 @@
 
 #include <cuda_runtime.h>
 #include <vector_types.h>
+#include <cstdint>
 
 namespace device {
 

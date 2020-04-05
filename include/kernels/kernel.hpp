@@ -5,8 +5,21 @@
 #ifndef HISTOGRAM_PROJECT_KERNEL_HPP
 #define HISTOGRAM_PROJECT_KERNEL_HPP
 
-#include <cuda_runtime.h>
 #include <vector_types.h>
+#include <cstdint>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <stdexcept>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+#include <math_functions.h>
+
 
 namespace kernel {
 
@@ -17,13 +30,13 @@ namespace kernel {
     texture<float4, cudaTextureType2D, cudaReadModeElementType> ImgHSV;
 
     __global__ void
-    normalizePixel(const size_t imgWidth, const size_t imgHeight, float4 *output);
+    normalizePixel(size_t imgWidth, size_t imgHeight, float4 *output);
 
     __global__ void
-    RGB_to_HSV(const size_t imgWidth, const size_t imgHeight, float4 *output);
+    RGB_to_HSV(size_t imgWidth, size_t imgHeight, float4 *output);
 
     __global__ void
-    HSV_to_RGB(const size_t imgWidth, const size_t imgHeight, uchar4 *output);
+    HSV_to_RGB(size_t imgWidth, size_t imgHeight, uchar4 *output);
 
 }
 

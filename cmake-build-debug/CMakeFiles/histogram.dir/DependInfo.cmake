@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CUDA
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/device/device.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/device/device.cu.o"
-  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/histogram_normalizer.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/histogram_normalizer.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/kernels/kernel.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/kernels/kernel.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/main.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process.cu.o"
