@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_CHECK_CUDA
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/chrono/chronoGPU.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/chrono/chronoGPU.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/main.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/main.cu.o"
   "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process_HSV_to_RGB.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process_HSV_to_RGB.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process_RGB_to_HSV.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process_RGB_to_HSV.cu.o"
+  "/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process_normalized.cu" "/home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug/CMakeFiles/histogram.dir/src/processing/process_normalized.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 

@@ -10,7 +10,7 @@
 driver_types.h
 -
 
-../include/processing/process.hpp
+../include/processing/process_RGB_to_HSV.hpp
 vector
 -
 cstdint
@@ -20,6 +20,8 @@ cuda.h
 cuda_runtime.h
 -
 vector_types.h
+-
+device_launch_parameters.h
 -
 
 ../include/utils/common.hpp
@@ -52,14 +54,14 @@ vector
 vector_types.h
 -
 
-/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process.cu
+/home/jlebas01/M2/GPGPU/TP4_GPGPU/src/processing/process_RGB_to_HSV.cu
 iostream
 -
 utils/tools.hpp
 -
 utils/common.hpp
 -
-processing/process.hpp
+processing/process_RGB_to_HSV.hpp
 -
 chrono/chronoGPU.hpp
 -
