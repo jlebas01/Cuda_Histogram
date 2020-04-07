@@ -18,7 +18,6 @@
 #include <cstdint>
 #include <chrono/chronoCPU.hpp>
 #include <processing/process.hpp>
-#include <kernels/kernel.hpp>
 #include <lodepng.h>
 #include <utils/conv_utils.hpp>
 
@@ -97,7 +96,7 @@ namespace IMAC
 	// Main function
 	void main(int argc, char **argv) 
 	{	
-		char * fileName= "../images/chateau.png";
+		char * fileName= "../images/Lena.png";
 		uint convType;
 
 		// Parse command line
@@ -174,9 +173,8 @@ namespace IMAC
 		std::size_t lastPoint = fileNameStr.find_last_of(".");
 		std::string ext = fileNameStr.substr(lastPoint);
 		std::string name = fileNameStr.substr(0,lastPoint);
-		std::string convStr = utils::convertConvTypeToString(convType);
-		std::string outputCPUName = name + convStr + "_CPU" + ext;
-		std::string outputGPUName = name + convStr + "_GPU" + ext;
+		std::string outputCPUName = name  + "_CPU" + ext;
+		std::string outputGPUName = name  + "_GPU" + ext;
 
 		// Computation on CPU
 		/*convCPU(input, imgWidth, imgHeight, matConv, matSize, outputCPU);

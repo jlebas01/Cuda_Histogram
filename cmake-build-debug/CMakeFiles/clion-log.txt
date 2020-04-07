@@ -1,4 +1,26 @@
-/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/201.6668.86/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /home/jlebas01/M2/GPGPU/TP4_GPGPU
+/home/jlebas01/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jlebas01/M2/GPGPU/TP4_GPGPU
+-- The CXX compiler identification is GNU 8.4.0
+-- The CUDA compiler identification is NVIDIA 10.1.168
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working CUDA compiler: /usr/bin/nvcc
+-- Check for working CUDA compiler: /usr/bin/nvcc -- works
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found CUDA: /usr (found version "10.1") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jlebas01/M2/GPGPU/TP4_GPGPU/cmake-build-debug
